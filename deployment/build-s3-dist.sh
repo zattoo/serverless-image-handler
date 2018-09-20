@@ -72,8 +72,8 @@ pwd
 echo "cp pngquant $VIRTUAL_ENV"
 cp -f pngquant $VIRTUAL_ENV
 #installing optipng pngcrush gifsicle jpegtran
-echo "yum install optipng pngcrush gifsicle libjpeg* pngquant ImageMagick-devel -y"
-yum install optipng pngcrush gifsicle libjpeg* pngquant ImageMagick-devel -y
+echo "yum install optipng pngcrush gifsicle libjpeg* pngquant ImageMagick-devel python-cairosvg -y"
+yum install optipng pngcrush gifsicle libjpeg* pngquant ImageMagick-devel python-cairosvg -y
 mkdir $VIRTUAL_ENV/bin/lib
 cp -f /usr/bin/jpegtran $VIRTUAL_ENV
 cp -f /usr/bin/optipng $VIRTUAL_ENV
@@ -88,8 +88,8 @@ echo 'yum install nasm autoconf automake libtool -y'
 yum install nasm autoconf automake libtool -y
 echo 'wget https://github.com/mozilla/mozjpeg/releases/download/v3.2/mozjpeg-3.2-release-source.tar.gz'
 wget https://github.com/mozilla/mozjpeg/releases/download/v3.2/mozjpeg-3.2-release-source.tar.gz
-tar -zxvf mozjpeg-3.2-release-source.tar.gz 
-cd mozjpeg 
+tar -zxvf mozjpeg-3.2-release-source.tar.gz
+cd mozjpeg
 autoreconf -fiv
 mkdir build && cd build
 sh ../configure
@@ -98,7 +98,7 @@ cp -f /var/task/libjpeg.so* $VIRTUAL_ENV/bin/lib
 cp -f /var/task/bin/jpegtran $VIRTUAL_ENV/mozjpeg
 #building imgmin
 cd $VIRTUAL_ENV
-pwd 
+pwd
 echo 'git clone https://github.com/rflynn/imgmin.git'
 git clone https://github.com/rflynn/imgmin.git
 cd imgmin
