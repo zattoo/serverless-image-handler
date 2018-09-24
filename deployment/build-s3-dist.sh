@@ -43,9 +43,9 @@ cd $deployment_dir/dist
 pwd
 echo "virtualenv env"
 virtualenv env
-pip install pip==9.0.3
 echo "source env/bin/activate"
 source env/bin/activate
+pip install pip==9.0.3
 echo "pip install $deployment_dir/../source/image-handler-custom-resource/. --target=$deployment_dir/dist/env/lib/python2.7/site-packages/"
 pip install $deployment_dir/../source/image-handler-custom-resource/. --target=$deployment_dir/dist/env/lib/python2.7/site-packages/
 cd $deployment_dir/dist/env/lib/python2.7/site-packages/
@@ -59,9 +59,9 @@ cd $deployment_dir/dist
 pwd
 echo "virtualenv env"
 virtualenv env
-pip install pip==9.0.3
 echo "source env/bin/activate"
 source env/bin/activate
+pip install pip==9.0.3
 cd ../..
 pwd
 echo "pip install source/image-handler/. --target=$VIRTUAL_ENV/lib/python2.7/site-packages/"
